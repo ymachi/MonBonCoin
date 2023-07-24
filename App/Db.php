@@ -26,6 +26,7 @@ class Db {
                 echo "Problème de connexion à la BDD " . $err->getMessage();
             }
         }
+         return self::$db;
     }
 }
 
