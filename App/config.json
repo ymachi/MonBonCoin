@@ -1,6 +1,7 @@
 {
+    "host": "localhost",
     "name": "monBonCoin",
-    "dbname": "monboncoin",
+    "dbName": "monboncoin",
     "user" : "root",
     "password" : "",
     "baseSite" : "/monBonCoin/public/"
