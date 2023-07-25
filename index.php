@@ -2,6 +2,7 @@
 
 use App\Db;
 use Models\Categories;
+use Models\Products;
 use Models\Users;
 
 
@@ -69,3 +70,42 @@ $data = ['amydiawara75@gmail.com', $pass, 'aminata','diawara', '17 rue eugene fo
     // $categories = Categories::delete(1);   
 ?>
 
+<h2>Test de la méthode findAll sur products </h2>
+<?php
+    $products = Products::findAll();
+    var_dump($products);
+?>
+
+<h2>Test de la méthode findById sur products </h2>
+<?php
+$products = Products::findById(1);
+var_dump($products);
+?>
+    
+<h2>Test de la méthode findByUser sur products </h2>
+<?php
+$products = Products::findByUser(2);
+var_dump($products);
+?>
+
+<h2>Test de la méthode findByCat sur products </h2>
+<?php
+$products = Products::findByCat(1);
+var_dump($products);
+?>
+
+ <h2>Test de la méthode creat sur products </h2>
+<?php
+// $data = [1,3,'bibliotheque','pour enfant', 30, 'bibliotheque.jpg'];
+//  Products::create($data); 
+?>
+
+<h2>Test de la méthode update sur products </h2>
+<?php
+$data = [1,3,'bibliotheque','petite bibliothéque en bois brun', 500, 'bibliotheque.jpg', 3];
+ Products::update($data); 
+?>
+
+ <h2>Test de la méthode update sur products </h2>
+ <?php
+ 
