@@ -39,6 +39,7 @@ class Products extends Controller{
         }
       
     }
+    // Méthode qui gère la récupération et l'affichage de tous les produits 
     
 }
 
