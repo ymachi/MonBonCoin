@@ -8,7 +8,7 @@ class Products extends Controller{
         // On utilise la méthode render du controller principale pour afficher la bonne vue avec les bonnes infos
 
         self::render('products/accueil', [
-            'title' => 'Les deux derniers produits',
+            'title' => 'Les trois derniers produits',
             'products' => $products
         ]);
 
