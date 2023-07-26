@@ -43,10 +43,15 @@ class Products extends Controller{
     public static function AffichageProducts(){
         // Je récupère tous les produits 
         $products = \Models\Products::findAll();
+
+        // pour mon formulaire de tri, je récupère toutes les catégories
+        $categories = \Models\Categories::findAll();
         // J'utilise render() pour envoyer ces produits à la bonne vue
         self::render('products/accueil', [
             'title' => 'Tous les produits Mon Bon Coin',
-            'products' => $products]);
+            'products' => $products,
+            'categories' => $categories
+        ]);
     }
 }
 

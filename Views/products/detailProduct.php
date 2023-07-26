@@ -22,20 +22,20 @@ if ($erreur != "") : ?>
                         </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 bg-primary text-light">
-                    <p><u>Description :</u></p>
-                    <p><?= $product['description'] ?></p>
+                <div class="col-12 col-md-6 bg-primary text-dark">
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 btn btn-primary btn-sm"><u>Description :</u></p>
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><?= $product['description'] ?></p>
                 </div>
-                <div class="col-12 col-md-6 bg-primary text-light">
-                    <p><u>Prix :</u></p>
-                    <p><?= $product['price'] ?> €</p>
+                <div class="col-12 col-md-6 bg-primary text-dark">
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><u>Prix :</u></p>
+                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><?= $product['price'] ?> €</p>
                 </div>
             </div>
 
 
         </div>
         <div class="card-footer text-center bg-primary">
-            <a href="/panier" class="btn btn-dark">Ajouter au panier</a>
+            <a href="/panier" class="btn btn-secondary">Ajouter au panier</a>
         </div>
     </div>
 <?php endif ?>
