@@ -4,11 +4,11 @@ namespace Controllers;
 class Products extends Controller{
     public static function accueil(){
         // echo "vous êtes dans la méthode accueil";
-         $products =  \Models\Products::findAll();
+         $products =  \Models\Products::findAll("date DESC", 2);
         // On utilise la méthode render du controller principale pour afficher la bonne vue avec les bonnes infos
 
         self::render('products/accueil', [
-            'title' => 'Les trois derniers produits',
+            'title' => 'Les deux derniers produits',
             'products' => $products
         ]);
 
@@ -40,6 +40,13 @@ class Products extends Controller{
       
     }
     // Méthode qui gère la récupération et l'affichage de tous les produits 
-    
+    public static function AffichageProducts(){
+        // Je récupère tous les produits 
+        $products = \Models\Products::findAll();
+        // J'utilise render() pour envoyer ces produits à la bonne vue
+        self::render('products/accueil', [
+            'title' => 'Tous les produits Mon Bon Coin',
+            'products' => $products]);
+    }
 }
 
