@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 use Controllers\Controller;
 
 class Routeur
@@ -37,7 +38,7 @@ class Routeur
         if (array_key_exists($request, $this->routes)) {
             $controller = "Controllers\\" . $this->routes[$request]['controller'];
             $action = $this->routes[$request]['action'];
-            Controller::$action();
+            $controller::$action();
         }else{
             echo "la page que vous demandez n'existe pas";
         }
