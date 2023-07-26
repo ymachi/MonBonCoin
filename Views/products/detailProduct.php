@@ -23,11 +23,11 @@ if ($erreur != "") : ?>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 bg-primary text-dark">
-                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 btn btn-primary btn-sm"><u>Description :</u></p>
+                    <p><u>Description :</u></p>
                     <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><?= $product['description'] ?></p>
                 </div>
                 <div class="col-12 col-md-6 bg-primary text-dark">
-                    <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><u>Prix :</u></p>
+                    <p "><u>Prix :</u></p>
                     <p class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3"><?= $product['price'] ?> €</p>
                 </div>
             </div>

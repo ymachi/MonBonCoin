@@ -8,10 +8,14 @@
         <form action="" method="GET">
             <div class="form-group">
                 <label for="cat" class="form-label mt-4">Catégorie</label>
-                <select class="form-select" id="cat">
+                <select class="form-select" id="cat" name="idCat">
+                    
                     <option value="">Toutes les catégories</option>
+                    
+
                     <?php foreach($categories as $category) : ?>
-                        <option value="<?= $category['idCategory'] ?>"><?= $category['title'] ?></option>
+                        option value="<?= $category['idCategory'] ?>" <?= isset($_GET['idCat']) && $_GET['idCat'] == $category['idCategory'] ? "selected" : null ?>><?= $category['title'] ?>
+                    </option>
                     <?php endforeach ?>
                 </select>
             </div>

@@ -42,10 +42,16 @@ class Products extends Controller{
     // Méthode qui gère la récupération et l'affichage de tous les produits 
     public static function AffichageProducts(){
         // Je récupère tous les produits 
-        $products = \Models\Products::findAll();
-
         // pour mon formulaire de tri, je récupère toutes les catégories
         $categories = \Models\Categories::findAll();
+
+        // Je récupère tous les produits avec ou sans filtre
+        if(isset($_GET['idCat']) && $_GET['idCat'] !=""){
+            $idCat = $_GET['idCat'];
+            $products = \Models\Products::findByCat($idCat);
+        }else {
+            $products = \Models\Products::findAll();
+        }
         // J'utilise render() pour envoyer ces produits à la bonne vue
         self::render('products/accueil', [
             'title' => 'Tous les produits Mon Bon Coin',
