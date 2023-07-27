@@ -3,6 +3,10 @@
 
 use App\Routeur;
 
+// Pour gerer les connexions on utilise la session
+session_start();
+// J'ai maintenant accés à $_SESSION
+
 // echo "point d'entrée de notre site";
 // Pour rester sur le fichier index.php quoi qu'il arrive, je dois faire une réécriture d'url
 // Une des possibilité est d'utiliser un fichier config du serveur apache qui s'appelle .htaccess
