@@ -38,12 +38,12 @@ require_once('autoloader.php');
 
 <h2>Utilisation de la méthode create() sur users</h2>
 <?php
-$pass = password_hash('12345678', PASSWORD_DEFAULT);
 
-$data = ['amydiawara75@gmail.com', $pass, 'aminata','diawara', '17 rue eugene fourniere', '75018','paris'];
+$pass = password_hash('12345678', PASSWORD_DEFAULT);
+$data = ['admin@gmail.com', $pass, 'admin','admin', '149 avenue Galleni', '93170','Bagnolet'];
 
     // Users::create($data);
-    // Users::update($data);
+  // Models\Users::update($data);
 ?>
 
 

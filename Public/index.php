@@ -18,3 +18,4 @@ define('ROOT', dirname(__DIR__));
 
 $routeur = new Routeur;
 $routeur->app();
+
