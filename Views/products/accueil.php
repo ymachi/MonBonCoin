@@ -14,7 +14,7 @@
                     
 
                     <?php foreach($categories as $category) : ?>
-                        option value="<?= $category['idCategory'] ?>" <?= isset($_GET['idCat']) && $_GET['idCat'] == $category['idCategory'] ? "selected" : null ?>><?= $category['title'] ?>
+                        <option value="<?= $category['idCategory'] ?>" <?= isset($_GET['idCat']) && $_GET['idCat'] == $category['idCategory'] ? "selected" : null ?>><?= $category['title'] ?>
                     </option>
                     <?php endforeach ?>
                 </select>

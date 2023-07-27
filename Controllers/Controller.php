@@ -16,6 +16,8 @@ class Controller{
 
         require_once('../Views/layout.php');
 
+        
+
     }
      
     
