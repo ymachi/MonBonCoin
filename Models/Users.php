@@ -41,14 +41,14 @@ class Users extends Db{
     public static function create(array $data){
         // Syntaxe sans les BindValue utlisation du "?"
         // Avec cette $data doit être un tableau qui contient toutes les valeurs à enregistrer en BDD
-        $request = "INSERT INTO users (login, password, firstName,lastName, adress, cp, city) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $request = "INSERT INTO users (login, password, firstName,lastName, address, cp, city) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $reponse = self::getDb()->prepare($request);
         return $reponse->execute($data);
     }
     //2// Méthode pour modifier un user
 
     public static function update(array $data){
-        $request = "UPDATE users SET login = ?, password = ?, firstName = ?, lastName = ?, adress = ?, cp = ?, city = ? WHERE idUser = ?";
+        $request = "UPDATE users SET login = ?, password = ?, firstName = ?, lastName = ?, address = ?, cp = ?, city = ? WHERE idUser = ?";
         $reponse = self::getDb()->prepare($request);
         return $reponse->execute($data);
     }
